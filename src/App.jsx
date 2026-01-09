@@ -1,6 +1,4 @@
 
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 
@@ -520,7 +518,7 @@ const CampusGuardApp = () => {
               >
                 <option value="">Select offense type</option>
                 {offenceTypes.map(type => (
-                  <option key={type} value={type}>{type.replace('_', ' ')}</option>
+                  <option key={type} value={type}>{type.replace(/_/g, ' ')}</option>
                 ))}
               </select>
             </div>
@@ -610,7 +608,7 @@ const CampusGuardApp = () => {
               <Shield className="w-8 h-8 text-blue-600 mr-2" />
               <h1 className="text-xl font-bold text-gray-800">Face Recognition</h1>
             </div>
-            <button onClick={() => setCurrentView('admin-dassboard')} className="text-gray" />
+            <button onClick={() => setCurrentView('admin-dashboard')} className="text-gray" />
           </div>
         </div>
       </nav>
